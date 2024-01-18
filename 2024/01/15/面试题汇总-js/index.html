@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>面试题汇总 js | Axin</title><meta name="author" content="Axin"><meta name="copyright" content="Axin"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="闭包 闭包（Closure）是一个非常重要的概念，在许多编程语言中都存在，尤其在JavaScript中十分常用。闭包是指那些能够访问自由变量的函数。所谓的自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量。 闭包的工作原理当一个函数创建了另一个函数，并将其作为对象返回，返回的函数就能访问到创建它的那个函数的作用域。这就是闭包的核心特性：即使外部函数已经执行完毕，闭包仍能访问外部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试题汇总 js">
+<meta property="og:url" content="https://axin-link.github.io/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB-js/index.html">
+<meta property="og:site_name" content="Axin">
+<meta property="og:description" content="闭包 闭包（Closure）是一个非常重要的概念，在许多编程语言中都存在，尤其在JavaScript中十分常用。闭包是指那些能够访问自由变量的函数。所谓的自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量。 闭包的工作原理当一个函数创建了另一个函数，并将其作为对象返回，返回的函数就能访问到创建它的那个函数的作用域。这就是闭包的核心特性：即使外部函数已经执行完毕，闭包仍能访问外部">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-01-15T08:17:47.000Z">
+<meta property="article:modified_time" content="2024-01-15T08:18:39.387Z">
+<meta property="article:author" content="Axin">
+<meta property="article:tag" content="个人、博客">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://axin-link.github.io/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB-js/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '面试题汇总 js',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2024-01-15 16:18:39'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 随笔</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Axin"><span class="site-name">Axin</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 阅读</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 随笔</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> Movie</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">面试题汇总 js</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-01-15T08:17:47.000Z" title="Created 2024-01-15 16:17:47">2024-01-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-01-15T08:18:39.387Z" title="Updated 2024-01-15 16:18:39">2024-01-15</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="面试题汇总 js"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h1><blockquote>
+<p>闭包（Closure）是一个非常重要的概念，在许多编程语言中都存在，尤其在JavaScript中十分常用。闭包是指那些能够访问自由变量的函数。所谓的自由变量是指在函数中使用的，但既不是函数参数也不是函数的局部变量的变量。</p>
+<h3 id="闭包的工作原理"><a href="#闭包的工作原理" class="headerlink" title="闭包的工作原理"></a>闭包的工作原理</h3><p>当一个函数创建了另一个函数，并将其作为对象返回，返回的函数就能访问到创建它的那个函数的作用域。这就是闭包的核心特性：即使外部函数已经执行完毕，闭包仍能访问外部函数的局部变量。</p>
+<h3 id="闭包的用途"><a href="#闭包的用途" class="headerlink" title="闭包的用途"></a>闭包的用途</h3><ol>
+<li><strong>数据封装</strong>: 闭包可以用来模拟私有属性和方法。由于闭包中的变量不会直接暴露给外部作用域，这可以保护这些变量不被外部访问。</li>
+<li><strong>维持状态</strong>: 在JavaScript中，闭包常用于维持某种状态或数据。例如，在事件处理器或异步操作中保存状态。</li>
+<li><strong>实现回调和高阶函数</strong>: 闭包允许将函数作为参数传递给另一个函数，或从另一个函数返回，这是高阶函数的基础。</li>
+</ol>
+<h3 id="闭包的注意事项"><a href="#闭包的注意事项" class="headerlink" title="闭包的注意事项"></a>闭包的注意事项</h3><ul>
+<li><strong>内存泄漏</strong>: 不恰当的使用闭包可能导致内存泄漏，因为闭包的作用域链中包含了外部变量的引用。</li>
+<li><strong>性能考虑</strong>: 过度使用闭包可能导致性能问题，因为每个闭包都有自己的作用域链，增加了内存的使用。</li>
+</ul>
+</blockquote>
+<h1 id="原型和原型链"><a href="#原型和原型链" class="headerlink" title="原型和原型链"></a>原型和原型链</h1><blockquote>
+<p>在JavaScript中，原型（Prototype）和原型链（Prototype Chain）是实现对象继承和共享属性的一种机制。理解这一概念对于深入理解JavaScript是非常重要的。</p>
+<h3 id="原型（Prototype）"><a href="#原型（Prototype）" class="headerlink" title="原型（Prototype）"></a>原型（Prototype）</h3><p>JavaScript是基于原型的语言，这意味着对象可以从其他对象继承属性。在JavaScript中，几乎所有的对象都有一个内部属性，它通常被称为[[Prototype]]，在代码中可以通过<code>__proto__</code>属性或<code>Object.getPrototypeOf()</code>方法访问。这个内部属性是对另一个对象的引用，即该对象的“原型”。</p>
+<p>当你试图访问一个对象的属性或方法时，如果这个对象本身没有这个属性或方法，JavaScript就会去它的原型对象上查找，这个原型对象也可能有自己的原型，依此类推。</p>
+<h3 id="原型链（Prototype-Chain）"><a href="#原型链（Prototype-Chain）" class="headerlink" title="原型链（Prototype Chain）"></a>原型链（Prototype Chain）</h3><p>原型链是一种机制，它使得对象可以访问不属于自己的属性。当尝试访问一个对象的属性时，如果这个对象自己没有这个属性，JavaScript会沿着原型链向上查找，直到找到该属性或达到原型链的顶端（null）。这个查找过程就是原型链的工作原理。</p>
+<h3 id="原型链的重要性"><a href="#原型链的重要性" class="headerlink" title="原型链的重要性"></a>原型链的重要性</h3><ul>
+<li><strong>继承</strong>: 原型链是JavaScript中实现继承的主要方式。</li>
+<li><strong>性能</strong>: 在原型链上查找属性或方法可能会影响性能，尤其是当链很长时。</li>
+<li><strong>共享方法</strong>: 通过原型链，对象可以共享方法而不必在每个对象实例中重新定义这些方法。</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><strong>循环引用</strong>: 在构建原型链时，需要注意避免循环引用，否则会导致无限循环的问题。</li>
+<li><strong>动态性</strong>: 原型链是动态的，修改原型对象上的属性或方法会影响所有从该原型继承的对象。</li>
+</ul>
+</blockquote>
+<h1 id="如何理解-js-的异步"><a href="#如何理解-js-的异步" class="headerlink" title="如何理解 js 的异步"></a>如何理解 js 的异步</h1><blockquote>
+<p>JS是一门单线程的语言，这是因为它运行在浏览器的渲染主线程中，而渲染主线程只有一个而渲染主线程承担着诸多的工作，渲染页面、执行 JS 都在其中运行。如果使用同步的方式，就极有可能导致主线程产生阻塞，从而导致消息队列中的很多其他任务无法得到执行。这样一来，一方面会导致繁忙的主线程白白的消耗时间，另一方面导致页面无法及时更新，给用户造成卡死现象。<br>所以浏览器采用异步的方式来避免。具体做法是当某些任务发生时，比如计时器、网络、事件监听，主线程将任务交给其他线程去处理，自身立即结束任务的执行，转而执行后续代码。当其他线程完成时，将事先传递的回调函数包装成任务，加入到消息队列的未尾排队，等待主线程调度执行。在这种异步模式下，浏览器永不阻塞，从而最大限度的保证了单线程的流畅运行。</p>
+</blockquote>
+<h1 id="js-的事件循环"><a href="#js-的事件循环" class="headerlink" title="js 的事件循环"></a>js 的事件循环</h1><blockquote>
+<p>事件循环又叫做消息循环，是浏览器渲染主线程的工作方式。在chrome 的源码中，它开启一个不会结束的 for 循环，每次循环从消息队列中取出第一个任务执行，而其他线程只需要在合适的时候将任务加入到队列末尾即可。过去把消息队列简单分为宏队列和微队列，这种说法目前已无法满足复杂的浏览器环境，取而代之的是一种更加灵活多变的处理方式。根据 W3C官方的解释，每个任务有不同的类型，同类型的任务必须在同一个队列，不同的任务可以属于不同的队列。不同任务队列有不同的优先级，在一次事件循环中，由浏览器自行决定取哪一个队列的任务。但浏览器必须有一个微队列，微队列的任务一定具有最高的优先级，必须优先调度执行。</p>
+</blockquote>
+<h1 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h1><blockquote>
+<p><code>Promise</code> 是JavaScript中用于异步编程的一个非常重要的特性。一个Promise对象代表了一个可能现在还不可用的值，但在将来某个时刻可能会确定下来。通过Promise，可以组织和处理异步操作的结果，避免过多的回调函数，使代码更清晰和易于维护。</p>
+<h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
+<li><strong>Pending（等待）</strong>：初始状态，既不是成功，也不是失败。</li>
+<li><strong>Fulfilled（已实现）</strong>：意味着操作成功完成。</li>
+<li><strong>Rejected（已拒绝）</strong>：意味着操作失败。</li>
+</ul>
+<h3 id="创建Promise"><a href="#创建Promise" class="headerlink" title="创建Promise"></a>创建Promise</h3><p>创建一个新的Promise对象通常涉及到指定执行异步操作的函数。这个函数接受两个参数：<code>resolve</code>（成功时调用）和<code>reject</code>（失败时调用）。</p>
+<h3 id="使用Promise"><a href="#使用Promise" class="headerlink" title="使用Promise"></a>使用Promise</h3><p>当Promise被创建后，它可以通过<code>.then()</code>, <code>.catch()</code>, 和<code>.finally()</code>方法来处理成功或失败的结果。</p>
+<ul>
+<li><strong>.then()</strong>: 当Promise成功时，<code>then</code>里面的函数会被执行。</li>
+<li><strong>.catch()</strong>: 当Promise失败时，<code>catch</code>里面的函数会被执行。</li>
+<li><strong>.finally()</strong>: 无论Promise成功还是失败，<code>finally</code>里面的函数都会被执行。</li>
+</ul>
+<h3 id="链式调用"><a href="#链式调用" class="headerlink" title="链式调用"></a>链式调用</h3><p>Promise的一个重要特性是可以链式调用，通过链式调用，可以更简洁地处理多个异步操作。</p>
+<h3 id="错误处理"><a href="#错误处理" class="headerlink" title="错误处理"></a>错误处理</h3><p>对于链式Promise，可以在链的末尾放置一个<code>.catch()</code>，来处理前面任何一个<code>.then()</code>中发生的错误。</p>
+<h3 id="Promise的静态方法"><a href="#Promise的静态方法" class="headerlink" title="Promise的静态方法"></a>Promise的静态方法</h3><ul>
+<li><strong>Promise.all()</strong>: 当所有给定的Promise都完成时，这个方法返回的Promise才会成功。</li>
+<li><strong>Promise.race()</strong>: 只要给定的Promise中有一个最先完成，无论成功还是失败，这个方法返回的Promise就会随之完成。</li>
+</ul>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://Axin-link.github.io">Axin</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://axin-link.github.io/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB-js/">https://axin-link.github.io/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB-js/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="面试题汇总 Vue"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">面试题汇总 Vue</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Axin</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Axin-link"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Axin-link" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:3498018835@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%97%AD%E5%8C%85"><span class="toc-number">1.</span> <span class="toc-text">闭包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86"><span class="toc-number">1.0.1.</span> <span class="toc-text">闭包的工作原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E7%94%A8%E9%80%94"><span class="toc-number">1.0.2.</span> <span class="toc-text">闭包的用途</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AD%E5%8C%85%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">1.0.3.</span> <span class="toc-text">闭包的注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE"><span class="toc-number">2.</span> <span class="toc-text">原型和原型链</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%EF%BC%88Prototype%EF%BC%89"><span class="toc-number">2.0.1.</span> <span class="toc-text">原型（Prototype）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE%EF%BC%88Prototype-Chain%EF%BC%89"><span class="toc-number">2.0.2.</span> <span class="toc-text">原型链（Prototype Chain）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="toc-number">2.0.3.</span> <span class="toc-text">原型链的重要性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-number">2.0.4.</span> <span class="toc-text">注意事项</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3-js-%E7%9A%84%E5%BC%82%E6%AD%A5"><span class="toc-number">3.</span> <span class="toc-text">如何理解 js 的异步</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#js-%E7%9A%84%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF"><span class="toc-number">4.</span> <span class="toc-text">js 的事件循环</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Promise"><span class="toc-number">5.</span> <span class="toc-text">Promise</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">5.0.1.</span> <span class="toc-text">基本概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%9B%E5%BB%BAPromise"><span class="toc-number">5.0.2.</span> <span class="toc-text">创建Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8Promise"><span class="toc-number">5.0.3.</span> <span class="toc-text">使用Promise</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%BE%E5%BC%8F%E8%B0%83%E7%94%A8"><span class="toc-number">5.0.4.</span> <span class="toc-text">链式调用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86"><span class="toc-number">5.0.5.</span> <span class="toc-text">错误处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Promise%E7%9A%84%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">5.0.6.</span> <span class="toc-text">Promise的静态方法</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB-js/" title="面试题汇总 js">面试题汇总 js</a><time datetime="2024-01-15T08:17:47.000Z" title="Created 2024-01-15 16:17:47">2024-01-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/15/%E9%9D%A2%E8%AF%95%E9%A2%98/" title="面试题汇总 Vue">面试题汇总 Vue</a><time datetime="2024-01-15T01:35:25.862Z" title="Created 2024-01-15 09:35:25">2024-01-15</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Axin</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
